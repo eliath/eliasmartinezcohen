@@ -1,0 +1,29 @@
+{
+	"strict": false,
+	"browser": true,
+	"jquery": true,
+	"devel": true,
+
+	"smarttabs": true,
+	"indent": 4,
+	"eqeqeq": true,
+	"quotmark": "single",
+	"newcap": true,
+	"curly": false,
+	"immed": true,
+
+	"latedef": true,
+	"undef": true,
+	"unused": true,
+	"sub": true,
+
+	"nonbsp": true,
+
+	"globals": {
+		"_site": true,
+		"_home": true,
+		"_mobile": true,
+		"module": true,
+		"require": true
+	}
+}

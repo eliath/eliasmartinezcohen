@@ -1,5 +1,7 @@
-/www/.sass-cache
-/www/.sass-cache/*
+www/.sass-cache
+
+.DS_Store
 **/.DS_Store
-/www/eliasmartinezcohen.com.sublime-project
-/www/eliasmartinezcohen.com.sublime-workspace
+
+**/eliasmartinezcohen.com.sublime-project
+**/eliasmartinezcohen.com.sublime-workspace
