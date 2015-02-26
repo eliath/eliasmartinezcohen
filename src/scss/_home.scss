@@ -1,0 +1,113 @@
+#home {
+	min-width: 645px;
+	font-family: $franklin;
+
+	a {
+		text-decoration: none;
+		cursor: pointer;
+		@include anim-fast(color);
+		color: $black;
+		&:hover {color: red;}
+	}
+
+	.main-container, .links-container {
+		position: relative;
+		top: 0; left: 0;
+		margin: 0; padding: 0;
+		width: 100%;
+		height: 100%;
+		min-height: 600px;
+		@include anim-medium(width);
+	}
+
+	.main-container {
+		padding: 0 30px;
+	}
+	
+
+	.card {
+		position: fixed;
+		left: 120px;
+		bottom: 60px;
+		width: $card_w;
+		height: $card_h;
+		background: rgba(255,255,255,0.75);
+		border: 1px solid $black;
+		box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+		border-radius: 1px;
+		padding: 20px 30px;
+		z-index: 1;
+
+		color: $black;
+		font-weight: 800;
+		font-size: 18px;
+		line-height: 24px;
+		letter-spacing: .5px;
+		
+		.email {
+			cursor: pointer;
+		}
+
+		.occupation {
+			.sep {
+				font-size: .66em;
+				margin: 0 5px;
+				vertical-align: 1px;
+			}
+		}
+
+		.links {
+			position: absolute;
+			bottom: 20px;
+			width: 100%;
+			
+			a {
+				display: block;
+				float: left;
+				width: ($card-w / 2) - 30px;
+			}
+
+			#projects-link {}
+
+			#resume-link {
+				text-align: right;
+				padding-right: 30px;
+			}
+		}
+	}
+
+	footer {
+		position: absolute;
+		z-index: 3;
+		top: 100%;
+		width:100%;
+		height: 38px;
+		padding: 0 30px;
+		background: rgba($black,0.85);
+		box-shadow: 0 -1px 4px rgba(0,0,0,0.2);
+		font: {
+			family: $inconsolata;
+			size: .7em;
+		}
+
+		p {
+			text-align: center;
+			word-wrap: keep-all;
+			a {
+				display: inline-block;
+				height: 100%;
+				line-height: 38px;
+				color: $white;
+				padding: 0 7px;
+				text-transform: uppercase;
+				@include anim-fast(color);
+				&:hover {
+					color: $red;
+				}
+			}
+			.sep {
+				display: inline;
+			}
+		}
+	}
+}

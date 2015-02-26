@@ -1,0 +1,262 @@
+#resume {
+	// background: image-url($noise-bg);
+	font-family: “Helvetica Neue”, Helvetica, sans-serif;
+    font-weight: 100;
+
+    a { 
+        color: #3062ff; 
+        text-decoration: none;
+    }
+    a:hover {text-decoration: underline;}
+    a:visited { color: #3062ff; }
+    a:active {
+        color: #fc1327;
+    }
+
+    p, ul {
+        padding: 0;
+        margin: 0;
+        font: {
+            // family: $inconsolata;
+            size: 0.85em;
+        }
+        letter-spacing: 1px;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    h1 {
+        font-family: $franklin, sans-serif;
+        font-size: 2em;
+    }
+
+    h2 {
+        font-family: $franklin, sans-serif;
+        font-size: 1.35em;
+        letter-spacing: 1px;
+        font-weight: bold;
+        padding: 0;
+        margin: 5px 0 5px 0;
+        color: #313131
+    }
+
+    h3 {
+        font-family: $franklin, serif;
+        font-size: 1.1em;
+        margin: 7px 0 3px;
+        padding: 0;
+        font-weight: 500;
+        color: #000;
+    }
+
+    h4 {
+        font-family: $franklin, serif;
+        font-size: .75em;
+        margin: 0;
+        padding: 0 5px 0 0;
+        font-weight: 500;
+    }
+
+    h6 {
+        font-family: $franklin, sans-serif;
+        text-align: right;
+        padding-bottom: 20px;
+        color: #797979;
+        font-weight: 200;
+    }
+
+    .main-container {
+        width: 100%;
+        height: 100%;
+        padding: 10px 30px;
+        background: rgba($black, 0.618);
+        overflow-y:auto;
+    }
+
+	.back-btn {
+        position: fixed;
+        display: block;
+        top: 5px;
+        left: 35px;
+        z-index: 2;
+        width: 50px; height: 50px;
+        background: none;
+        border-radius: 100%;
+        cursor: pointer;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+        color: $white;
+        background: rgba($black, 0.8);
+        &:hover {
+            background: rgba($white, 0.8);
+            color: $black;
+        }
+    }
+
+    .page {
+    	position: relative;
+    	background: rgba($white, 0.9);
+    	width: 61.8%;
+    	min-width: 600px;
+        max-width: 950px; 
+    	margin: 0 auto;
+        padding: 15px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    	box-shadow: 0 0 10px black;
+    }
+
+    .right, .left {
+    	display: block;
+    	min-height: 25px;
+    	float: left;
+    }
+
+    .left {
+        width: 38.2%;
+    }
+
+    .right {
+        width: 61.8%;
+    }
+
+    .area {
+        clear:both;
+        overflow: auto;
+
+        h2 {
+            border-bottom: 1px solid $black;
+        }
+
+        .left {
+            p, li {
+                font-family: $franklin;
+            }
+        }
+
+        .right p {
+            font-size: 0.8em;
+        }
+    }
+
+    .Top {
+        .left, .right {
+            width: 50%;
+        }
+        .name {
+        	font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .subname {
+            margin: 4px 0 15px 2px;
+            .contact {
+                font: {
+                    family: $inconsolata;
+                }
+                float: left;
+
+            }
+        }
+
+        .download {
+            display: block;
+            text-align: right;
+            margin: 10px 25px;
+            font: {
+                family: $inconsolata;
+                size: 10pt;
+            }
+        }
+    }
+
+    .Edu {
+        margin-top: 10px;
+        min-height: 50px;
+        p {
+            line-height: 1.3em;
+        }
+        .left {
+            p {
+                margin-left: 2px;
+            }
+        }
+
+        .right {
+            h4 {
+                margin-top: 8px;
+                font-weight: bold;
+            }
+            p {
+                margin: 5px 0 0;
+                margin-bottom: 15px;
+                min-height: 60px;
+            }
+        }
+        
+        ul {
+            margin-top: 20px;
+            li {
+                margin: 6px 0;
+            }
+        }
+    }
+
+    .activities_dates {
+    	font-size: .8em;
+    	text-align: right;
+    	padding-right: 20px;
+    }
+
+
+    .Experience {
+        margin-top: -20px;
+        h3 {
+            margin-top: 8px;
+            font-weight: 400;
+        }
+
+        ul.jobinfo {
+            li {
+                line-height: 1.2em;
+            }
+        }
+
+        .description {
+            margin: 24px 0 0;
+            line-height: 1.2em;
+        }
+
+       .CIS {
+            margin-top: 15px;
+        }
+    }
+
+
+    .Skills {
+        margin-top: 10px;
+        h2 {
+            margin-bottom: 8px;
+        }
+        .left, .right {
+            min-height: 30px;
+            margin: 3px 0;
+        }
+        p {
+            line-height: 1.2em;
+            margin-top: 8px;
+        }
+
+    }
+
+    .invisi-sep {
+        clear:both;
+    }
+
+    footer {
+        display: none;
+    }
+}

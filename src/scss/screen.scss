@@ -1,0 +1,28 @@
+@import 'compass/reset';
+@import 'compass/css3';
+@import '_base';
+@import '_font';
+@import '_color';
+@import '_home';
+@import '_slashes';
+@import '_bands';
+@import '_resume';
+@import '_projects';
+@import '_mobile';
+@import '_404';
+
+html {
+	@include fixed_fill;
+	min-width: 645px;
+	overflow: hidden;
+}
+
+body {
+	@include absolute_fill;
+	background: image-url($bg-image);
+	background-size: 500px;
+
+	&::-webkit-scrollbar { z-index: -1; }
+	overflow-y: auto;
+	overflow-x: hidden;
+}

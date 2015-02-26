@@ -1,0 +1,54 @@
+@include keyframes(rotX) {
+	100% { @include rotateX(360deg); }
+}
+
+@include keyframes(rot) {
+	100% { @include rotate(360deg); }
+}
+
+@include keyframes(rotX_neg) {
+	100% { @include rotateX(-360deg); }
+}
+
+@include keyframes(rot_neg) {
+	100% { @include rotate(-360deg); }
+}
+
+@include keyframes(return_rot) {
+	100% { 
+		@include rotate(0deg);
+		@include rotate(0deg);
+	}
+}
+
+.slashWrap {
+	width: $slash_w;
+	position: fixed;
+	top: 40%; left: 50%;
+	margin-top: -$slash_h/2;
+	margin-left: -$slash_w/2;
+	.wrapA,.wrapB {
+		position: absolute;
+		@include anim-slow(all);
+		&.antirotate {
+			@include animate(return_rot, 0.4s);
+		}
+	}
+
+	.wrapA {
+		top: 0; left: 0;
+		@include transform-origin(138px, 200px);
+		&.rotate {
+			@include animate(rot_neg, 4s);
+			@include animate(rotX, 3.5s);
+		}
+	}
+	.wrapB {
+		top: -7px; left: 38.2%;
+		@include transform-origin(44px, 177px);
+		&.rotate {
+			@include animate(rot, 3.5s);
+			@include animate(rotX_neg, 4s);
+		}
+	}
+}

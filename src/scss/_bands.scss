@@ -1,0 +1,35 @@
+@include keyframes(bandL) {
+	0%   { top: 0; }
+	100% { top: -($brand_h - 1); }
+}
+
+@include keyframes(bandR) {
+	0%   { top: -$brand_h; }
+	100% { top: -1px; }
+}
+
+.band {
+	display: block;
+	position: fixed;
+	width: $brand_w;
+	@include calc(height, '100% + #{$brand_h}');
+	background-image: image-url($brand-sprite);
+	background-size: 60px 256px;
+	z-index: 10;
+	$anim-speed	: 8s;
+
+	&.L {
+		left: 0; top: 0;
+		background-position: top left;
+		box-shadow: 1px 0 4px rgba(black, 0.7);
+		@include animate(bandL, $anim-speed);
+	}
+
+	&.R {
+		right: 0; bottom: 0;
+		background-position: top right;
+		box-shadow: -1px 0 4px rgba(black, 0.7);
+		@include animate(bandR, $anim-speed);
+	}
+
+}
