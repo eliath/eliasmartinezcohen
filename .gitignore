@@ -1,4 +1,5 @@
-www/.sass-cache
+src/.sass-cache
+src/node_modules
 
 .DS_Store
 **/.DS_Store
@@ -6,3 +7,17 @@ www/.sass-cache
 **/eliasmartinezcohen.com.sublime-project
 **/eliasmartinezcohen.com.sublime-workspace
 mockups/
+www/
+
+src/font/**/*.eot
+src/font/**/*.woff
+src/font/**/*.ttf
+src/font/**/*.svg
+
+**/*.pdf
+**/*.png
+**/*.gif
+**/*.jpg
+**/*.jpeg
+**/*.ico
+**/*.svg

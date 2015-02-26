@@ -21,7 +21,7 @@
 
 	"globals": {
 		"_site": true,
-		"_home": true,
+		"_desktop": true,
 		"_mobile": true,
 		"module": true,
 		"require": true

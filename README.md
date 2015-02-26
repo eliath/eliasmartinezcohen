@@ -1,4 +1,11 @@
-eliasmartinezcohen
+Elías Martínez Cohen
 ==================
+##:)
+This is my personal website, not really sure why it has a public git, but whatever.
 
-My website
+```
+$ cd src
+$ grunt build
+$ cd ../www
+$ http-server
+```
