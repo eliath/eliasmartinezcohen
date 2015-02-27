@@ -12,7 +12,7 @@ _site = {
 
 	goto: function goto(page) {
 		var state = {page: page},
-			url = (page === 'home') ? '' : '/'+page;
+			url = (page === 'home') ? '/' : '/'+page;
 		if (url) window.history.pushState(state, '', url);
 
 		//loadkey is the name of the function to call
