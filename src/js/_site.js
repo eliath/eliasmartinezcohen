@@ -19,10 +19,8 @@ _site = {
 		var loadkey = 'load'+page.charAt(0).toUpperCase() + page.substr(1).toLowerCase();
 		
 		if (this.isMobile()) {
-			console.log('_site.goto[M]:', page);
 			_mobile[loadkey]();
 		} else {
-			console.log('_site.goto[DT]:', page);
 			var $el = $('.main-container');
 			$el.fadeOut('400', function() {
 				window.scrollTo(0,0);
@@ -38,7 +36,6 @@ _site = {
 	back: function back(event) {
 		if (event.originalEvent.state === null) return true;
 		var page = event.originalEvent.state.page;
-		console.log('_site.back:PAGE', page);
 		if (page) {
 			this.currPage = page;
 			switch(page) {
