@@ -26,7 +26,7 @@
 		height: 20vw;
 		margin: 38.2% auto 0;
 		border-radius: 100%;
-		background-color: white;
+		border: 1px solid rgba($mobile_fg,0.382);
 		background-image: url($personal-icon);
 		background-size: contain;
 	}
@@ -85,7 +85,7 @@
 		display: block; position: absolute;
 		width: 100vw; min-height: 100%;
 		padding: 0 25px 50px;
-		background: rgba($mobile_fg, 0.7);
+		background: rgba($mobile_bg, 0.7);
 		left: 100vw; top: 0;
 
 		@include anim-medium(left);
@@ -102,17 +102,26 @@
 				size: 12pt;
 				weight: 200;
 			}
-			color: $mobile_bg;
+			color: $mobile_fg;
 			line-height: 1.25rem;
 			a {
-				display: inline;
-				color: $mobile_bg;
-				text-decoration: underline;
+				color: $blue;
+				font-size: 0.7rem;
+				line-height: 1em;
+				text-decoration: none;
 			}
 
-			margin: 30px 0;
+			margin: 10px 0;
 			&:first-of-type {
-				margin-top: 25%;
+				margin-top: 20vh;
+			}
+		}
+
+		ul {
+			margin: -10px 0 0; padding: 0;
+			li {
+				margin: 5px 0;
+
 			}
 		}
 
@@ -126,8 +135,10 @@
 			line-height: $b-sz;
 			text-align: center;
 			font-size: 12pt;
-			color: $mobile_fg;
 			border-radius: 100%;
+			i {
+				color: $mobile_fg;
+			}
 		}
 	}
 

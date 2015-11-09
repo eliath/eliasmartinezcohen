@@ -4,15 +4,16 @@
 
 $black	:	#242424;
 $white	:	#EFEFEF;
-$red	:	#e5223c;
+$red	:	#ff0100;
+$blue   :   #2600db;
 
 
 $midnight:	#2A2E39;
 $glowinthedark	:	#ecf0e6;
 $yellow         : #f3ec87;
 $link           : #A6BAC7;
-$mobile_bg		: #232830;
-$mobile_fg		: #EEEEEE;
+$mobile_fg		: #232830;
+$mobile_bg		: #F9F9F9;
 
 @mixin bg-gradient($from, $to) {
   background-color: $from; 															/* fallback/image non-cover color */

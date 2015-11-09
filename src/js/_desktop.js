@@ -52,22 +52,22 @@ _desktop = {
 		//Email
 		$('<p>', {class: 'email', html: _site.obfuscateEmail()}).appendTo($container);
 
+		//Occupation
+		var occ = 'Software Engineer, Twitter Cortex';
+		$('<p>', {class: 'occupation', html: occ}).appendTo($container);
+
 		//ASL
 		var asl = _site.getAge() + ' / M / NYC';
 		$('<p>', {class: 'asl', html: asl}).appendTo($container);
 
-		//Occupation
-		var occ = ['Web', 'Software', 'UI', 'UX'].join('<span class="sep">•</span>');
-		$('<p>', {class: 'occupation', html: occ}).appendTo($container);
-
 		//Bottom links:
-		var links = [
-			'<a id="projects-link">&gt;&gt; Projects</a>',
-			'<a id="resume-link">&gt;&gt; Résumé</a>'
-		].join('\n');
+		var links = '<a id="professional-link">Résumé</a>' + '\n' +
+			'<span class="sep">\\</span>' + '\n' +
+			'<a id="projects-link">Misc. Projects</a>';
+
 		$('<div>', {class: 'links', html: links}).appendTo($container);
 		$('#projects-link').click(function() {_site.goto('projects');});
-		$('#resume-link').click(function() {_site.goto('resume');});
+		$('#professional-link').click(function() {_site.goto('professional');});
 		
 		cb(); //callback function
 	},
@@ -83,19 +83,19 @@ _desktop = {
 		}
 	},
 
-	rapidColor: function rapidColor() {
+	rapidColor: function() {
 		var c = 'hsl(' + (Math.floor(Math.random() * 361)) + ', 100%, 60%)';
 		$('.rapidStroke').css('stroke', c);
 		$('.rapidBorder').css('border-color', c);
 	},
 
-	loadHome: function loadHome() {
+	loadHome: function() {
 		this.$el.empty();
 		$('body').attr('id', 'home');
 		this.render();
 	},
 
-	loadResume: function loadResume() {
+	loadProfessional: function() {
 		$('body').attr('id', 'resume');
 		this.$el.load('resume.html', function() {
 			$('.contact').html(_site.obfuscateEmail());

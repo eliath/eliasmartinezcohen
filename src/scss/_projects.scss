@@ -140,7 +140,8 @@
 		a {
 			color: $black;
 			text-decoration: underline;
-			&:hover {color: $red;}
+			&:hover {color: $blue;}
+			&:active {color: $red;}
 		}
 
 		$content-w: 75%;

@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 		clean: {
 			//cleans all files in detination i.e. make clean
 			build: {
-				src: [DEST+'/font', DEST+'/img', DEST+'/js', DEST+'/css'],
+				src: [DEST+'/font', DEST+'/js', DEST+'/css'],
 				options: {force: true}
 			},
 			

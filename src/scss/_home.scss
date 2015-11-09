@@ -7,7 +7,8 @@
 		cursor: pointer;
 		@include anim-fast(color);
 		color: $black;
-		&:hover {color: red;}
+		&:hover {color: $blue;}
+		&:active {color:$red;}
 	}
 
 	.main-container, .links-container {
@@ -35,17 +36,20 @@
 		border: 1px solid $black;
 		box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 		border-radius: 1px;
-		padding: 20px 30px;
+
+		$cardPadV: 20px;
+		$cardPadH: 30px;
+		padding: $cardPadV $cardPadH;
 		z-index: 1;
 
 		color: $black;
-		font-weight: 800;
 		font-size: 18px;
 		line-height: 24px;
 		letter-spacing: .5px;
 		
 		.email {
 			cursor: pointer;
+			font-weight: 800;
 		}
 
 		.occupation {
@@ -57,21 +61,13 @@
 		}
 
 		.links {
+			font-weight: 600;
 			position: absolute;
-			bottom: 20px;
-			width: 100%;
+			bottom: 25px;
+			width: $card_w - $cardPadH*2;
 			
-			a {
-				display: block;
-				float: left;
-				width: ($card-w / 2) - 30px;
-			}
-
-			#projects-link {}
-
-			#resume-link {
-				text-align: right;
-				padding-right: 30px;
+			.sep {
+				margin: 0 5px;
 			}
 		}
 	}
@@ -87,7 +83,7 @@
 		box-shadow: 0 -1px 4px rgba(0,0,0,0.2);
 		font: {
 			family: $inconsolata;
-			size: .7em;
+			size: .75em;
 		}
 
 		p {
@@ -98,7 +94,7 @@
 				height: 100%;
 				line-height: 38px;
 				color: $white;
-				padding: 0 7px;
+				padding: 0 10px;
 				text-transform: uppercase;
 				@include anim-fast(color);
 				&:hover {

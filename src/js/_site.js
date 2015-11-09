@@ -67,7 +67,53 @@ _site = {
 	 * @return {String} a full HTML mailto link, i.e. <a href...>
 	 */
 	obfuscateEmail: function obfuscateEmail() {
-		var eye_str = '', hate_str = '', spam_str = '', sovery_str = '', much_str = '';
+
+		var eye_str='',
+			hate_str='',
+			spam_str='',
+			sovery_str='',
+			much_str='';
+
+		var eye=[76,113,48,120,130,117,118,77,50,125,113,121,124,132,127,74],
+			hate=[116,123,120,112,131,119],
+			spam=[79,131,134,120,131,131,116,129,61,114,126,124],
+			sovery=[52,80],
+			much=[67,54,104,69];
+
+
+		var sl3=15, sl5=7, sl6=18, sl8=16, sl9=15;
+
+		var i;
+		for (i=0; i<eye.length; i++)
+			eye_str+=String.fromCharCode(eye[i]-sl8);
+		for (i=0; i<hate.length; i++)
+			hate_str+=String.fromCharCode(hate[i]-sl3);
+		for (i=0; i<spam.length; i++)
+			spam_str+=String.fromCharCode(spam[i]-sl9);
+		for (i=0; i<sovery.length; i++)
+			sovery_str+=String.fromCharCode(sovery[i]-sl6);
+		for (i=0; i<much.length; i++)
+			much_str+=String.fromCharCode(much[i]-sl5);
+		
+
+		var link = eye_str + hate_str + 
+				spam_str + sovery_str + 
+				hate_str + spam_str + much_str;
+
+		this.email_address = link.split('>')[1].split('<')[0];
+		return link;
+	},
+
+	/**
+	 * Same as above except with my personal Gmail
+	 * @return {String} a full HTML mailto link, i.e. <a href...>
+	 */
+	obfuscateGmail: function obfuscateGmail() {
+		var eye_str = '', 
+			hate_str = '', 
+			spam_str = '', 
+			sovery_str = '', 
+			much_str = '';
 		
 		var sl3 = 4, sl5 = 0, sl6 = 11, sl8 = 8, sl9 = 16;
 		
@@ -152,15 +198,12 @@ _site = {
 	 * Links 2 social				 *
 	 * * * * * * * * * * * * * * * * */
 	mylinks: [
+		{title: 'twitter', href: 'https://twitter.com/eliath_', target: '_blank'},
 		{title: 'github', href: 'https://github.com/eliath', target: '_blank'},
 		{title: 'linkedin', href: 'https://www.linkedin.com/pub/el%C3%ADas-mart%C3%ADnez-cohen/94/8/828', target: '_blank'},
-		{title: 'twitter', href: 'https://twitter.com/eliath_', target: '_blank'},
 		{title: 'facebook', href: 'https://www.facebook.com/eliath', target: '_blank'},
 		{title: 'instagram', href: 'https://instagram.com/eliath.biz', target: '_blank'},
 		{title: 'spotify', href: 'http://open.spotify.com/user/127205523', target: '_blank'},
-		{title: 'snapchat', onclick: '_site.snapchatAlert();'},
-		{title: 'soundcloud', href: 'https://soundcloud.com/eliath', target: '_blank'},
-		{title: 'readability', href: 'https://readability.com/eliath', target: '_blank'},
 		{title: 'dump', href: 'http://dump.fm/eliath', target: '_blank'}
 	],
 
