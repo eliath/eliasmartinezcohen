@@ -5,12 +5,16 @@
 	background: $mobile_bg;
 	color: $mobile_fg;
 	font: {
-		family: $franklin;
+		family: $inconsolata;
+		size: 13pt;
+		weight: 200;
 	}
 
 	a {
-		text-decoration: none;
 		color: $mobile_fg;
+		text-decoration: none;
+		&:active { color: $red; }
+		&:visited { color: $mobile_fg; }
 	}
 
 	.main {
@@ -19,61 +23,40 @@
 		z-index: 0;
 
 		transition: -webkit-filter .3s ease; //doesn't really work in 'most' browsers.
-	}
+		.more {
+			position: fixed;
+			display: block;
+			text-align: center;
+			box-sizing: border-box;
+			width: 100%;
+			padding-left: 50%;
+			bottom: 0;
+			right: 0;
+			$more-h: 80px;
+			height: $more-h;
+			font-size: 10pt;
+			line-height: $more-h;
 
-	.personal-icon {
-		width: 20vw;
-		height: 20vw;
-		margin: 38.2% auto 0;
-		border-radius: 100%;
-		border: 1px solid rgba($mobile_fg,0.382);
-		background-image: url($personal-icon);
-		background-size: contain;
-	}
-
-	.social {
-		display: block;
-		position: absolute;
-		width: 100%;
-		@include calc(top, '38.2% + 30px');
-		height: 25px;
-		text-align: center;
-		font-size: 10vw;
-
-		a {
-			display: inline-block;
-			margin: 0 20px;
+			color: $blue;
+			text-decoration: underline;
 		}
 	}
 
-	.contact {
-		display: block;
-		width: 100%;
-		position: absolute;
-		@include calc(top, '38.2% + 110px');
-		// text-transform: uppercase;
-		text-align: center;
-		font-weight: 800;
-		font-size: 5vw;
-	}
-
-	.more {
-		font: {
-			family: $inconsolata;
-			size: 10.5pt;
-		}
-		display: block;
-		width: 100%;
-		text-align: center;
-		position: fixed;
-		bottom: 0;
-		right: 0;
-		$more-h: 66px;
-		height: $more-h;
-		line-height: $more-h;
-
-		.fa {
-			margin-left: 3px;
+	.info-wrap {
+		ul {
+			box-sizing: border-box;
+			padding: 45px 30px;
+			li {
+				font-size: 15pt;
+				margin: 4px 0;
+				letter-spacing: 1px;
+				sup {
+					font-size: 8pt;
+					vertical-align: super;
+					letter-spacing: 0;
+					a {color: $blue;}
+				}
+			}
 		}
 	}
 
@@ -81,47 +64,47 @@
 		@include filter(blur(8px));
 	}
 
-	.info {
+	.links {
 		display: block; position: absolute;
 		width: 100vw; min-height: 100%;
-		padding: 0 25px 50px;
+		padding: 0;
 		background: rgba($mobile_bg, 0.7);
 		left: 100vw; top: 0;
+		letter-spacing: 1px;
 
 		@include anim-medium(left);
 		
 		&.open { left: 0; }
 
-		.p-wrap {
-			overflow-y: auto;
+		i.x-icon {
+			display: block;
+			background: url("/img/slashes.svg") 20px center no-repeat;
+			background-size: 30px;
+			width: 75px;
+			height: 75px;
+			border: 0px solid #444;
+			border-radius: 100%;
+			margin: 45px auto 0;
 		}
 
 		p {
-			font: {
-				family: $inconsolata;
-				size: 12pt;
-				weight: 200;
-			}
-			color: $mobile_fg;
+			margin: 45px 0 0;
 			line-height: 1.25rem;
-			a {
-				color: $blue;
-				font-size: 0.7rem;
-				line-height: 1em;
-				text-decoration: none;
-			}
-
-			margin: 10px 0;
-			&:first-of-type {
-				margin-top: 20vh;
-			}
+			text-align: center;
+			font-size: 15px;
 		}
 
 		ul {
-			margin: -10px 0 0; padding: 0;
+			margin: 60px 0;
+			text-align: center;
 			li {
-				margin: 5px 0;
-
+				display: inline;
+				margin: 2px;
+				font-size: 13px;
+				a {
+					color: $blue;
+					text-decoration: underline;
+				}
 			}
 		}
 
@@ -136,13 +119,6 @@
 			text-align: center;
 			font-size: 12pt;
 			border-radius: 100%;
-			i {
-				color: $mobile_fg;
-			}
 		}
-	}
-
-	.fix-rotate {
-		@include transform(rotate(90deg));
 	}
 }
