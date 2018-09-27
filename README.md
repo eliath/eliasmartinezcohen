@@ -3,7 +3,7 @@ Elías Martínez Cohen
 
 A personal website.
 
-This is the old eliath.biz website, operating from 2015 - 2018.
+This is the old [eliath.biz](https://eliath.biz/) website, operating from 2015 - 2018.
 
 The new website code now lives in a private repo, not on github.
 
