@@ -1,14 +1,16 @@
 Elías Martínez Cohen
 ==================
-##:)
-### http://eliath.biz/
 
-###Description
-This is my personal website, not really sure why it has a public git, but whatever.
+A personal website.
 
-###Directions
+This is the old eliath.biz website, operating from 2015 - 2018.
+
+The new website code now lives in a private repo, not on github.
+
+### Running
+
 To build, `cd src/` and run `grunt build`.  
 Then, to view in a browser, `cd ../www` and `http-server` (if you have that tool installed).
 
-######Note:
-The git is missing all the images and whatnot, so it really won't be any good if you pull directly from repo.
+**Note:**
+The git might be missing all the images and whatnot, so the specifically the projects section may not display correctly.
